@@ -1,24 +1,11 @@
 # travelask
 
-## Project setup
-```
-npm install
-```
+Test task for travelask (Donetsk)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+vue
 
-### Compiles and minifies for production
-```
-npm run build
-```
+vuetify
 
-### Lints and fixes files
-```
-npm run lint
-```
+pagination
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+filter list

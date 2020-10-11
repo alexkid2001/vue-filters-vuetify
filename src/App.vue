@@ -35,7 +35,7 @@
             @input="changePage"
           ></v-pagination>
         </template>
-        <div class="dummi-block" v-else>Записей не найдено</div>
+        <div class="dummy-block" v-else>Записей не найдено</div>
 
       </div>
     </v-main>
@@ -45,7 +45,6 @@
 
 <script>
 import Filters from './components/Filters'
-// import axios from 'axios'
 
 export default {
   name: 'App',
@@ -56,14 +55,6 @@ export default {
 
   data () {
     return {
-      headers: [
-        {
-          text: 'Name',
-          align: 'start',
-          value: 'name'
-        },
-        { text: 'Description', value: 'description' }
-      ],
       hotels: null,
       countries: null,
       filteredHotels: [],
@@ -85,18 +76,18 @@ export default {
       })
   },
   methods: {
-    filterHotels (filters) {
-      const filterKeys = Object.keys(filters)
-
-      return this.filteredHotels.filter(function (eachObj) {
-        return filterKeys.every(function (eachKey) {
-          if (!filters[eachKey].length) {
-            return true
-          }
-          return filters[eachKey].includes(eachObj[eachKey])
-        })
-      })
-    },
+    // filterHotels (filters) {
+    //   const filterKeys = Object.keys(filters)
+    //
+    //   return this.filteredHotels.filter(function (eachObj) {
+    //     return filterKeys.every(function (eachKey) {
+    //       if (!filters[eachKey].length) {
+    //         return true
+    //       }
+    //       return filters[eachKey].includes(eachObj[eachKey])
+    //     })
+    //   })
+    // },
     doFilter (filters) {
       this.filteredHotels = this.hotels
       if (filters.country) {
